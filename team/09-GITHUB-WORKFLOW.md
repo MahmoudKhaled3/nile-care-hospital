@@ -29,6 +29,6 @@ Open [`team/STATUS.md`](STATUS.md) for the current summary, then open the tracki
 
 The repository is public and contains only the reviewed, sanitised project package, so the supervisor can view it without access setup. Mahmoud adds team members with write access by GitHub username. Email addresses alone cannot grant repository access or be used for GitHub mentions. Until write access is granted, a member sends Mahmoud their branch name or patch and does not share a password or token.
 
-## Main-branch enforcement check
+## Main-branch enforcement
 
-Before the first team PR, Mahmoud must open **Settings → Branches** and confirm that `main` requires a pull request, at least one approval, conversation resolution, and no force-pushes. The current connected GitHub integration could not verify this setting remotely, so treat the rule as unconfirmed until Mahmoud sees it in the repository UI.
+The `main` branch is protected: every change requires a Pull Request, at least one approval from someone other than the last pusher, resolved review conversations, and no force-pushes or branch deletion. Administrators are included in the rule. A wrong PR stays out of `main` until the reviewer requests changes or the PR is closed.
