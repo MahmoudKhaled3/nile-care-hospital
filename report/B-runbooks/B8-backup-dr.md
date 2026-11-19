@@ -131,7 +131,7 @@ sudo mariadb -e "STOP REPLICA; RESET REPLICA ALL;"
 ```
 RTO = T1 − T0 (placeholder until executed). Failback: reverse `CHANGE REPLICATION SOURCE` to emr01, re-enable on-prem overrides, reconcile the delta window (binlog replay documented in report text).
 
-## 5. Ransomware recovery procedure (§8.4 — full simulation script in Deliverable C)
+## 5. File-screening recovery procedure (§8.4 — acceptance criteria in Deliverable C; detailed simulation procedure remains controlled locally)
 1. **Isolate**: power off the affected VM (lab) or block its IP at pfSense (production analogue); disable the compromised user account.
 2. **Scope**: Wazuh FIM alerts + FSRM block events (`Get-WinEvent` on dc02) + last-good restic snapshot list.
 3. **Restore**: from immutable Blob — the WORM policy prevents attacker deletion; `restic snapshots` → `restic restore <id>` to the share; verify GPG hashes of DB dumps before replay.

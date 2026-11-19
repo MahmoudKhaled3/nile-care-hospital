@@ -324,6 +324,6 @@ The [team plan](../team/00-TEAM-PLAN.md) records build ownership. Mahmed Shaker 
 |---|---|---|
 | A | Design package (this document) | `E:\NileCare\report\A-design-package.md` |
 | B | Implementation runbooks Ch4–8 | `E:\NileCare\report\B-runbooks\` |
-| C | Test plan, 9 scenarios + ransomware sim | `E:\NileCare\report\C-test-plan.md` |
+| C | Test plan, 9 scenarios and acceptance criteria | `E:\NileCare\report\C-test-plan.md` |
 | D | Security policies (ISO 27001 A + PDPL 151/2020) | `E:\NileCare\report\D-policies.md` |
 | E | Report text (Intro, Abstract, Conclusion, Limitations, Future Work) | `E:\NileCare\report\E-report-text.md` |
