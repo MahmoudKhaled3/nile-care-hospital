@@ -21,6 +21,6 @@ This repository contains the reviewed design, runbooks, report text, and team in
 
 Each member works in a branch named `work/<member>-<package>`, commits only their package, and opens a Pull Request into `main`. The PR must include the completed items, exact files, evidence summaries, measured results or `<PENDING>`, deviations, and the next dependency. An independent teammate reviews the owner's work; Mahmoud gives final integration sign-off and merges accepted work. The status page is updated in the same PR before merge, so a supervisor can see the latest accepted, staged, blocked, and pending work without opening the local VM folders.
 
-The repository is private. GitHub access is granted by username. On a personal private repository, collaborators receive write access; there is no read-only collaborator role. Add a supervisor only if write access is acceptable, or make a separately sanitised copy public. Until access is arranged, share a reviewed export; never share GitHub credentials.
+The repository is public and contains only the reviewed, sanitised project package. Anyone, including the supervisor, can view the status page and Pull Requests. Write access still requires adding a collaborator by GitHub username; never share GitHub credentials.
 
 Measured results are intentionally left as `<PENDING>` until the corresponding gate and evidence capture are complete.

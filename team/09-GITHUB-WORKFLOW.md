@@ -27,7 +27,7 @@ Open [`team/STATUS.md`](STATUS.md) for the current summary, then open the tracki
 
 ## Access
 
-The repository is private. Mahmoud adds team members by GitHub username; on a personal private repository, each collaborator receives write access. A supervisor cannot be granted read-only collaborator access on this repository type, so use a public sanitised copy or accept collaborator write access. Email addresses alone cannot grant repository access or be used for GitHub mentions. Until access is granted, a member sends Mahmoud their branch name or patch and does not share a password or token.
+The repository is public and contains only the reviewed, sanitised project package, so the supervisor can view it without access setup. Mahmoud adds team members with write access by GitHub username. Email addresses alone cannot grant repository access or be used for GitHub mentions. Until write access is granted, a member sends Mahmoud their branch name or patch and does not share a password or token.
 
 ## Main-branch enforcement check
 
