@@ -18,9 +18,17 @@ assignees: ""
 - Required screenshots or logs:
 - Measured result fields (use `<PENDING>` until run):
 
-## Current state
+## Checklist item state
 
-Choose one: `PENDING` / `STAGED` / `REPRODUCED` / `MEASURED` / `PARTIAL` / `BLOCKED` / `ACCEPTED`.
+For individual tasks choose one: `DONE` / `PARTIAL` / `BLOCKED` / `PENDING`.
+
+## Package state
+
+Choose one: `PENDING` / `IN PROGRESS` / `READY FOR REVIEW` / `ACCEPTED` / `PARTIAL` / `BLOCKED`. Use `ACCEPTED` only after the work PR is merged.
+
+## Evidence maturity
+
+Choose one: `NOT RUN` / `STAGED` / `REPRODUCED` / `MEASURED`.
 
 ## Dependency or blocker
 

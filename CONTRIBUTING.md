@@ -22,10 +22,12 @@ Use small commits with clear messages, for example `docs: record emr01 handoff` 
 
 - State the package and gate affected.
 - List the exact files changed.
-- Mark each assigned item `DONE`, `PARTIAL`, `BLOCKED`, or `PENDING`.
-- Give evidence filenames and measured values, or keep `<PENDING>` when not measured.
+- Mark checklist items `DONE`, `PARTIAL`, `BLOCKED`, or `PENDING`.
+- Mark the package state `PENDING`, `IN PROGRESS`, `READY FOR REVIEW`, `PARTIAL`, or `BLOCKED`.
+- Mark evidence maturity separately as `NOT RUN`, `STAGED`, `REPRODUCED`, or `MEASURED`.
+- Give a sanitised evidence summary, evidence filenames, and measured values, or keep `<PENDING>` when not measured. Raw screenshots and logs stay in the controlled evidence location.
 - Describe errors, fixes, dependencies, and any deviation from A-design-package.md.
 - Update `team/STATUS.md` in the same PR.
 - Confirm that no secret, VM/ISO file, raw evidence, or real patient data is included.
 
-Mahmoud reviews technical consistency. Mahmed Shaker checks evidence mapping and report assembly. Mahmed Salh checks sources and data claims. Only an accepted and merged PR counts as complete in the supervisor-facing status.
+An independent teammate reviews the owner's technical work. Mahmed Shaker checks evidence mapping and report assembly. Mahmed Salh checks sources and data claims. Mahmoud gives final integration sign-off, but does not act as the sole reviewer of his own package. After merge, Mahmoud creates a small status-only PR to mark the package `ACCEPTED` and close its tracking issue. Never mark a package `ACCEPTED` before the work PR is merged.

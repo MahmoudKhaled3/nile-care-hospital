@@ -2,15 +2,15 @@
 
 Last reviewed: 2026-11-19
 
-This is the supervisor-facing summary. `ACCEPTED` means the owner's Pull Request was reviewed and merged into `main`. `STAGED`, `PARTIAL`, and `MEASURED` are useful progress states but are not gate passes by themselves.
+This is the supervisor-facing summary. Package states are `PENDING`, `IN PROGRESS`, `READY FOR REVIEW`, `ACCEPTED`, `PARTIAL`, or `BLOCKED`; evidence maturity is `NOT RUN`, `STAGED`, `REPRODUCED`, or `MEASURED`. `ACCEPTED` means the owner's Pull Request was independently reviewed and merged into `main`. Checklist items use `DONE`, `PARTIAL`, `BLOCKED`, or `PENDING`. No state is a gate pass without the required evidence.
 
-| Owner | Package | State | Tracking issue | Current result / next action |
-|---|---|---|---|---|
-| Mahmoud | fw01, VMware networks, Windows, final integration | `PARTIAL` | [Issue #1](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/1) | Gate 1: VMnet10 and VMnet16 verified by screenshot; VMnet12/13/14/15/17 remain unverified. Continue read-only verification before sign-off. |
-| Youssef Al-Sayed | emr01, pacs01, portal01, lin-client, Ansible | `PENDING` | [Issue #2](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/2) | Submit staging inventory, service versions, playbook status, and the Linux handoff report. |
-| Iprahim Said | cloud-dr, Azure networking, VPN, Blob, Monitor | `PENDING` | [Issue #3](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/3) | Submit Azure region/SKU/quota, cost estimate, VNet/NSG, tunnel, immutability, and deallocation evidence. |
-| Mahmed Salh | Synthea/DICOM provenance, Chapters 1-2, references, compliance | `PENDING` | [Issue #4](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/4) | Submit source/licence/hash manifest and reviewed references. |
-| Mahmed Shaker | siem01, Wazuh, diagrams, evidence, report QA | `PENDING` | [Issue #5](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/5) | Submit base siem01 handoff, evidence register, and report QA notes. |
+| Owner | Package | Package state | Evidence maturity | Tracking issue | Latest PR | Current result / next action |
+|---|---|---|---|---|---|---|
+| Mahmoud | fw01, VMware networks, Windows, final integration | `PARTIAL` | `STAGED` | [Issue #1](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/1) | `<PENDING>` | Gate 1: VMnet10 and VMnet16 have screenshots from the earlier host; VMnet12/13/14/15/17 remain unverified. Recheck all networks read-only on the final laptop before sign-off. |
+| Youssef Al-Sayed | emr01, pacs01, portal01, lin-client, Ansible | `PENDING` | `NOT RUN` | [Issue #2](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/2) | `<PENDING>` | Submit staging inventory, service versions, playbook status, and the Linux handoff report. |
+| Iprahim Said | cloud-dr, Azure networking, VPN, Blob, Monitor | `PENDING` | `NOT RUN` | [Issue #3](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/3) | `<PENDING>` | Submit Azure region/SKU/quota, cost estimate, VNet/NSG, tunnel, immutability, and deallocation evidence. |
+| Mahmed Salh | Synthea/DICOM provenance, Chapters 1-2, references, compliance | `PENDING` | `NOT RUN` | [Issue #4](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/4) | `<PENDING>` | Submit source/licence/hash manifest and reviewed references. |
+| Mahmed Shaker | siem01, Wazuh, diagrams, evidence, report QA | `PENDING` | `NOT RUN` | [Issue #5](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/5) | `<PENDING>` | Submit base siem01 handoff, evidence register, and report QA notes. |
 
 ## Gate state
 
@@ -25,4 +25,4 @@ This is the supervisor-facing summary. `ACCEPTED` means the owner's Pull Request
 
 ## Update rule
 
-Every accepted package updates this table in the same merged PR with: owner, state, exact files, evidence filenames, measured values or `<PENDING>`, errors/fixes, deviation from A, dependency, reviewer, and review date.
+Every work PR updates the relevant row with package state, evidence maturity, tracking issue, active PR, exact files, sanitised evidence summary, measured values or `<PENDING>`, errors/fixes, deviation from A, and next dependency. After the work PR is merged, Mahmoud opens a status-only PR to change the package state to `ACCEPTED`, link the merged PR, and close the tracking issue. The independent reviewer and review date are recorded in that status-only PR.
