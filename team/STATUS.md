@@ -4,7 +4,7 @@ Last reviewed: 2026-11-19
 
 This is the supervisor-facing summary. `ACCEPTED` means the owner's Pull Request was reviewed and merged into `main`. `STAGED`, `PARTIAL`, and `MEASURED` are useful progress states but are not gate passes by themselves.
 
-| Owner | Package | State | Accepted source | Current result / next action |
+| Owner | Package | State | Tracking issue | Current result / next action |
 |---|---|---|---|---|
 | Mahmoud | fw01, VMware networks, Windows, final integration | `PARTIAL` | [Issue #1](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/1) | Gate 1: VMnet10 and VMnet16 verified by screenshot; VMnet12/13/14/15/17 remain unverified. Continue read-only verification before sign-off. |
 | Youssef Al-Sayed | emr01, pacs01, portal01, lin-client, Ansible | `PENDING` | [Issue #2](https://github.com/MahmoudKhaled3/nile-care-hospital/issues/2) | Submit staging inventory, service versions, playbook status, and the Linux handoff report. |
